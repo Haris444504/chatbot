@@ -1,0 +1,2309 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Haris Saddique — AI Engineer & Founder</title>
+
+  <meta
+    name="description"
+    content="Haris Saddique is an AI Engineer, AI Automation Developer, and Founder of FLOZEN AI, building practical AI systems and automation solutions."
+  />
+
+  <meta name="theme-color" content="#14532D" />
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: #f7f6f0;
+      color: #111814;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: #14532d;
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --forest: #14532d;
+      --forest-dark: #0b2e1a;
+      --forest-deep: #123524;
+      --sage: #dde9df;
+      --cream: #f7f6f0;
+      --white: #ffffff;
+      --text: #111814;
+      --muted: #66736a;
+      --border: rgba(17, 24, 20, 0.12);
+      --max-width: 1240px;
+    }
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: auto;
+    }
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+
+      color: var(--forest);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--forest);
+    }
+
+    .section-heading {
+      max-width: 850px;
+      margin-top: 24px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      font-weight: 600;
+    }
+
+    .section-heading p {
+      margin-top: 25px;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(247, 246, 240, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid transparent;
+      transition: 0.3s ease;
+    }
+
+    header.scrolled {
+      border-bottom-color: var(--border);
+    }
+
+    nav {
+      height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--forest);
+      color: white;
+
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: #39433d;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+
+      width: 0;
+      height: 1px;
+
+      background: var(--forest);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 12px 18px;
+
+      background: var(--forest);
+      color: white;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      transition: 0.25s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--forest-dark);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 150px;
+      padding-bottom: 80px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      top: 100px;
+      right: -150px;
+
+      width: 500px;
+      height: 500px;
+
+      border: 1px solid rgba(20, 83, 45, 0.1);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-label {
+      margin-bottom: 26px;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+
+      font-size: clamp(55px, 8vw, 112px);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+      font-weight: 600;
+    }
+
+    .hero h1 span {
+      color: var(--forest);
+    }
+
+    .hero-description {
+      max-width: 650px;
+
+      margin-top: 35px;
+
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+
+      margin-top: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      padding: 15px 22px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      border: 1px solid var(--forest);
+
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--forest);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--forest-dark);
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      color: var(--forest);
+    }
+
+    .btn-secondary:hover {
+      background: var(--sage);
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .portrait-frame {
+      position: relative;
+
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 0.82;
+
+      margin-left: auto;
+
+      background: var(--forest);
+      overflow: hidden;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      filter: grayscale(100%);
+      mix-blend-mode: luminosity;
+    }
+
+    .portrait-placeholder {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 40px;
+
+      color: white;
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #123524,
+          #14532d
+        );
+    }
+
+    .portrait-placeholder strong {
+      display: block;
+
+      font-size: 100px;
+      line-height: 1;
+
+      letter-spacing: -0.08em;
+    }
+
+    .portrait-label {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+
+      padding: 9px 12px;
+
+      background: white;
+      color: var(--forest);
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    /* =========================================================
+       CREDIBILITY STRIP
+    ========================================================= */
+
+    .credibility {
+      background: var(--forest);
+      color: white;
+    }
+
+    .credibility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .credibility-item {
+      padding: 30px 25px;
+
+      border-right: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .credibility-item:last-child {
+      border-right: none;
+    }
+
+    .credibility-number {
+      font-size: 11px;
+      opacity: 0.55;
+      letter-spacing: 0.1em;
+    }
+
+    .credibility-item strong {
+      display: block;
+
+      margin-top: 10px;
+
+      font-size: 15px;
+      line-height: 1.3;
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 100px;
+    }
+
+    .about-large {
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .about-large span {
+      color: var(--forest);
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .about-text p + p {
+      margin-top: 22px;
+    }
+
+    .about-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      margin-top: 45px;
+    }
+
+    .meta-box {
+      padding: 22px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-box small {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: var(--muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .meta-box strong {
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-section {
+      background: #eef2ec;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      margin-top: 70px;
+
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .skill-card {
+      min-height: 250px;
+
+      padding: 35px;
+
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      transition: 0.3s ease;
+    }
+
+    .skill-card:hover {
+      background: white;
+      transform: translateY(-5px);
+    }
+
+    .skill-index {
+      font-size: 11px;
+      color: var(--forest);
+      font-weight: 800;
+    }
+
+    .skill-card h3 {
+      margin-top: 55px;
+
+      font-size: 25px;
+      letter-spacing: -0.03em;
+    }
+
+    .skill-card p {
+      margin-top: 12px;
+
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    .projects {
+      background: var(--cream);
+    }
+
+    .project-list {
+      margin-top: 80px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+
+      padding: 55px 0;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .project:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-number {
+      font-size: 11px;
+      color: var(--forest);
+      font-weight: 800;
+    }
+
+    .project h3 {
+      margin-top: 20px;
+
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .project-description {
+      color: var(--muted);
+      margin-top: 18px;
+      max-width: 500px;
+    }
+
+    .project-visual {
+      min-height: 330px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      background: var(--forest);
+      overflow: hidden;
+    }
+
+    .project-visual::before,
+    .project-visual::after {
+      content: "";
+
+      position: absolute;
+
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 50%;
+    }
+
+    .project-visual::before {
+      width: 320px;
+      height: 320px;
+    }
+
+    .project-visual::after {
+      width: 200px;
+      height: 200px;
+    }
+
+    .project-code {
+      position: relative;
+      z-index: 1;
+
+      color: white;
+
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 2;
+
+      opacity: 0.9;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-top: 28px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+
+      background: var(--sage);
+
+      color: var(--forest);
+
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process {
+      background: var(--forest-dark);
+      color: white;
+    }
+
+    .process .eyebrow {
+      color: #b8d0bd;
+    }
+
+    .process .eyebrow::before {
+      background: #b8d0bd;
+    }
+
+    .process .section-heading p {
+      color: #a8b7ac;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+
+      margin-top: 70px;
+    }
+
+    .process-item {
+      padding: 25px;
+
+      min-height: 210px;
+
+      border-top: 1px solid rgba(255,255,255,0.18);
+      border-right: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .process-item:last-child {
+      border-right: none;
+    }
+
+    .process-item span {
+      font-size: 11px;
+      color: #a8c0ad;
+    }
+
+    .process-item h3 {
+      margin-top: 55px;
+
+      font-size: 20px;
+    }
+
+    /* =========================================================
+       FLOZEN AI
+    ========================================================= */
+
+    .flozen {
+      background: var(--sage);
+    }
+
+    .flozen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+
+      margin-top: 65px;
+    }
+
+    .flozen-card {
+      padding: 40px;
+
+      background: white;
+
+      border: 1px solid rgba(20,83,45,0.1);
+
+      transition: 0.3s ease;
+    }
+
+    .flozen-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .flozen-card .number {
+      font-size: 11px;
+      color: var(--forest);
+      font-weight: 800;
+    }
+
+    .flozen-card h3 {
+      margin-top: 50px;
+
+      font-size: 34px;
+      letter-spacing: -0.04em;
+    }
+
+    .flozen-card p {
+      margin-top: 15px;
+      color: var(--muted);
+    }
+
+    .flozen-logo {
+      margin-top: 45px;
+
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -0.07em;
+
+      color: var(--forest);
+    }
+
+    /* =========================================================
+       JOURNEY
+    ========================================================= */
+
+    .timeline {
+      margin-top: 70px;
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+
+      padding: 35px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-year {
+      color: var(--forest);
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .timeline-content h3 {
+      font-size: 25px;
+      letter-spacing: -0.03em;
+    }
+
+    .timeline-content p {
+      margin-top: 8px;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    /* =========================================================
+       PHILOSOPHY
+    ========================================================= */
+
+    .philosophy {
+      padding: 150px 0;
+
+      background: var(--forest);
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .philosophy p {
+      max-width: 1000px;
+
+      margin: auto;
+
+      font-size: clamp(38px, 6vw, 78px);
+      line-height: 0.98;
+
+      letter-spacing: -0.055em;
+    }
+
+    .philosophy span {
+      color: #b7d4be;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .contact-heading {
+      font-size: clamp(48px, 7vw, 90px);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+    }
+
+    .contact-heading span {
+      color: var(--forest);
+    }
+
+    .contact-info {
+      padding-top: 20px;
+    }
+
+    .contact-link {
+      display: block;
+
+      padding: 22px 0;
+
+      border-bottom: 1px solid var(--border);
+
+      font-size: 18px;
+      font-weight: 600;
+
+      transition: 0.25s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--forest);
+      padding-left: 10px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: var(--forest-dark);
+      color: white;
+
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .footer-copy {
+      color: #9cad9f;
+      font-size: 12px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 18px;
+
+      font-size: 12px;
+      color: #c0cdc3;
+    }
+
+    .footer-socials a:hover {
+      color: white;
+    }
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       CHAT WIDGET
+    ========================================================= */
+
+    .chat-launcher {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--forest);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(11, 46, 26, 0.28);
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    .chat-panel {
+      position: fixed;
+      right: 24px;
+      bottom: 96px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      width: min(370px, calc(100vw - 32px));
+      height: min(500px, calc(100dvh - 125px));
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 16px 48px rgba(11, 46, 26, 0.2);
+    }
+
+    .chat-panel[hidden] {
+      display: none;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px;
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .chat-header p {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    .chat-close {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .chat-messages {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 12px;
+      overflow-y: auto;
+      padding: 18px;
+    }
+
+    .chat-message {
+      max-width: 86%;
+      padding: 10px 13px;
+      border-radius: 14px;
+      background: #f0f4f1;
+      color: var(--text);
+      font-size: 14px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .chat-message.user {
+      align-self: flex-end;
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .chat-message.error {
+      background: #fff0ed;
+      color: #8a2415;
+    }
+
+    .chat-form {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .chat-input {
+      flex: 1;
+      min-width: 0;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .chat-send {
+      padding: 0 15px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--forest);
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .chat-send:disabled {
+      cursor: wait;
+      opacity: 0.65;
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .project,
+      .contact-grid,
+      .flozen-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-image {
+        margin-top: 20px;
+      }
+
+      .portrait-frame {
+        margin: auto;
+      }
+
+      .credibility-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .credibility-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-item:nth-child(2n) {
+        border-right: none;
+      }
+
+      .timeline-item {
+        grid-template-columns: 100px 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        font-size: 54px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .credibility-grid,
+      .skills-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .credibility-item,
+      .process-item {
+        border-right: none;
+      }
+
+      .project {
+        gap: 30px;
+      }
+
+      .project-visual {
+        min-height: 260px;
+      }
+
+      .about-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <header id="header">
+
+    <div class="container">
+
+      <nav>
+
+        <a href="#home" class="logo">
+          <span class="logo-mark">H</span>
+          <span>HARIS SADDIQUE</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#flozen">FLOZEN AI</a>
+          <a href="#journey">Journey</a>
+        </div>
+
+        <a href="#contact" class="nav-cta">
+          Let's Work Together
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div class="hero-content reveal">
+
+            <div class="eyebrow hero-label">
+              AI ENGINEER · BUILDER · FOUNDER
+            </div>
+
+            <h1>
+              Building
+              <span>practical AI</span>
+              systems.
+            </h1>
+
+            <p class="hero-description">
+              Haris Saddique is an AI Engineer, AI Automation Developer,
+              educator, and Founder of FLOZEN AI — focused on turning
+              ideas into practical AI-powered products and systems.
+            </p>
+
+            <div class="hero-actions">
+
+              <a href="#projects" class="btn btn-primary">
+                Explore Projects →
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                Start a Conversation
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero-image reveal">
+
+            <div class="portrait-frame">
+
+              <!--
+                Replace this placeholder with your actual photo:
+
+                <img src="your-photo.jpg" alt="Haris Saddique">
+              -->
+
+              <div class="portrait-placeholder">
+                <strong>HS</strong>
+              </div>
+
+              <div class="portrait-label">
+                HARIS SADDIQUE · AI ENGINEER
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CREDIBILITY
+    ====================================================== -->
+
+    <section class="credibility">
+
+      <div class="container">
+
+        <div class="credibility-grid">
+
+          <div class="credibility-item">
+            <div class="credibility-number">01</div>
+            <strong>BS Computer Science<br>UMT Lahore</strong>
+          </div>
+
+          <div class="credibility-item">
+            <div class="credibility-number">02</div>
+            <strong>AI / ML<br>Engineering</strong>
+          </div>
+
+          <div class="credibility-item">
+            <div class="credibility-number">03</div>
+            <strong>Founder & CEO<br>FLOZEN AI</strong>
+          </div>
+
+          <div class="credibility-item">
+            <div class="credibility-number">04</div>
+            <strong>AI Automation<br>& Education</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="section" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="reveal">
+
+            <div class="eyebrow">
+              ABOUT HARIS
+            </div>
+
+            <div class="about-large" style="margin-top:35px;">
+              Engineering with
+              <span>curiosity.</span>
+              Building with purpose.
+            </div>
+
+          </div>
+
+
+          <div class="about-text reveal">
+
+            <p>
+              Haris Saddique is a Computer Science student and AI Engineer
+              focused on Machine Learning, Generative AI, AI Automation,
+              and practical software development.
+            </p>
+
+            <p>
+              His work combines technical engineering with real-world
+              problem solving — from predictive ML systems and APIs to
+              AI agents, workflow automation, and product concepts.
+            </p>
+
+            <p>
+              He is also the Founder and CEO of FLOZEN AI, an AI education
+              and automation initiative focused on making modern AI
+              practical and accessible.
+            </p>
+
+
+            <div class="about-meta">
+
+              <div class="meta-box">
+                <small>Focus</small>
+                <strong>Artificial Intelligence</strong>
+              </div>
+
+              <div class="meta-box">
+                <small>Specialization</small>
+                <strong>AI Automation</strong>
+              </div>
+
+              <div class="meta-box">
+                <small>Education</small>
+                <strong>Computer Science</strong>
+              </div>
+
+              <div class="meta-box">
+                <small>Based In</small>
+                <strong>Lahore, Pakistan</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
+    <section class="section skills-section" id="skills">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">
+            EXPERTISE
+          </div>
+
+          <h2>
+            The tools behind
+            the systems.
+          </h2>
+
+          <p>
+            A practical engineering toolkit spanning AI, automation,
+            development, data, and modern APIs.
+          </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+          <div class="skill-card reveal">
+            <div class="skill-index">01</div>
+            <h3>AI & Machine Learning</h3>
+            <p>
+              Machine Learning, predictive modeling, model evaluation,
+              data preprocessing, and applied AI systems.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-index">02</div>
+            <h3>Generative AI</h3>
+            <p>
+              LLM applications, RAG concepts, prompt engineering,
+              AI agents, and intelligent workflows.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-index">03</div>
+            <h3>AI Automation</h3>
+            <p>
+              n8n workflows, APIs, webhooks, automated communication,
+              lead generation, and business workflows.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-index">04</div>
+            <h3>Development</h3>
+            <p>
+              Python, FastAPI, Streamlit, C++, REST APIs,
+              backend systems, and application development.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-index">05</div>
+            <h3>Data</h3>
+            <p>
+              Python-based data analysis, SQL, visualization,
+              preprocessing, and exploratory data analysis.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-index">06</div>
+            <h3>Tools & Platforms</h3>
+            <p>
+              Supabase, MySQL, GitHub, n8n, Vapi, APIs,
+              webhooks, and modern AI tooling.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section class="section projects" id="projects">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">
+            SELECTED WORK
+          </div>
+
+          <h2>
+            From data to
+            intelligent products.
+          </h2>
+
+          <p>
+            A selection of practical projects across Machine Learning,
+            APIs, automation, and AI-powered applications.
+          </p>
+
+        </div>
+
+
+        <div class="project-list">
+
+
+          <!-- PROJECT 01 -->
+
+          <article class="project reveal">
+
+            <div>
+
+              <div class="project-number">
+                PROJECT / 01
+              </div>
+
+              <h3>
+                Heart Disease
+                Prediction
+              </h3>
+
+              <p class="project-description">
+                A Machine Learning application designed to predict
+                heart disease risk using a trained classification model,
+                preprocessing, and an interactive application layer.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Scikit-Learn</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <div class="project-code">
+                MODEL = HEART_DISEASE_MODEL<br>
+                SCALER = STANDARD_SCALER<br>
+                INPUT → PREPROCESS<br>
+                PREDICT → RESULT
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 02 -->
+
+          <article class="project reveal">
+
+            <div>
+
+              <div class="project-number">
+                PROJECT / 02
+              </div>
+
+              <h3>
+                Mental Health
+                Score API
+              </h3>
+
+              <p class="project-description">
+                A machine learning prediction system exposed through
+                a FastAPI backend, demonstrating the transition from
+                a trained model to a usable API service.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">ML</span>
+                <span class="tag">API</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <div class="project-code">
+                POST /predict<br><br>
+                INPUT → VALIDATE<br>
+                MODEL → INFERENCE<br>
+                RESPONSE → JSON
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 03 -->
+
+          <article class="project reveal">
+
+            <div>
+
+              <div class="project-number">
+                PROJECT / 03
+              </div>
+
+              <h3>
+                Student Performance
+                Prediction
+              </h3>
+
+              <p class="project-description">
+                A data-driven Machine Learning project exploring
+                student performance factors and predictive modeling.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">ML</span>
+                <span class="tag">Data Analysis</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <div class="project-code">
+                DATASET → CLEANING<br>
+                FEATURES → ENGINEERING<br>
+                MODEL → TRAINING<br>
+                OUTPUT → PREDICTION
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 04 -->
+
+          <article class="project reveal">
+
+            <div>
+
+              <div class="project-number">
+                PROJECT / 04
+              </div>
+
+              <h3>
+                AI Automation
+                Systems
+              </h3>
+
+              <p class="project-description">
+                Practical automation concepts combining AI agents,
+                n8n workflows, APIs, webhooks, communication systems,
+                and business processes.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">n8n</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">APIs</span>
+                <span class="tag">Automation</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <div class="project-code">
+                TRIGGER<br>
+                ↓<br>
+                AI AGENT<br>
+                ↓<br>
+                DECISION<br>
+                ↓<br>
+                AUTOMATION
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESS
+    ====================================================== -->
+
+    <section class="section process">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">
+            ENGINEERING MINDSET
+          </div>
+
+          <h2>
+            Turning an idea
+            into a system.
+          </h2>
+
+          <p>
+            The goal is not simply to build AI models.
+            The goal is to turn technology into something useful.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-item reveal">
+            <span>01</span>
+            <h3>DATA</h3>
+          </div>
+
+          <div class="process-item reveal">
+            <span>02</span>
+            <h3>MODEL</h3>
+          </div>
+
+          <div class="process-item reveal">
+            <span>03</span>
+            <h3>API</h3>
+          </div>
+
+          <div class="process-item reveal">
+            <span>04</span>
+            <h3>AUTOMATION</h3>
+          </div>
+
+          <div class="process-item reveal">
+            <span>05</span>
+            <h3>PRODUCT</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FLOZEN AI
+    ====================================================== -->
+
+    <section class="section flozen" id="flozen">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">
+            FOUNDER · FLOZEN AI
+          </div>
+
+          <h2>
+            Building beyond
+            personal projects.
+          </h2>
+
+          <p>
+            FLOZEN AI combines AI education, automation,
+            and practical technology to help people and businesses
+            work with modern AI.
+          </p>
+
+        </div>
+
+
+        <div class="flozen-grid">
+
+          <div class="flozen-card reveal">
+
+            <div class="number">01 / EDUCATION</div>
+
+            <h3>
+              Learn AI.
+              Build AI.
+            </h3>
+
+            <p>
+              Practical learning experiences designed to make
+              Artificial Intelligence, automation, and modern
+              development easier to understand and apply.
+            </p>
+
+            <div class="flozen-logo">
+              FLOZEN
+            </div>
+
+          </div>
+
+
+          <div class="flozen-card reveal">
+
+            <div class="number">02 / AUTOMATION</div>
+
+            <h3>
+              Automate the
+              repetitive.
+            </h3>
+
+            <p>
+              AI-powered workflows, agents, chatbots, business
+              automation, lead systems, and intelligent applications
+              built around real-world processes.
+            </p>
+
+            <div class="flozen-logo">
+              AI
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JOURNEY
+    ====================================================== -->
+
+    <section class="section" id="journey">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">
+            JOURNEY
+          </div>
+
+          <h2>
+            Learning by
+            building.
+          </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-year">
+              EDUCATION
+            </div>
+
+            <div class="timeline-content">
+
+              <h3>
+                Bachelor of Science in Computer Science
+              </h3>
+
+              <p>
+                Building a strong foundation across programming,
+                data structures, databases, software engineering,
+                Artificial Intelligence, and Machine Learning.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-year">
+              AI / ML
+            </div>
+
+            <div class="timeline-content">
+
+              <h3>
+                Machine Learning & AI Projects
+              </h3>
+
+              <p>
+                Developing practical projects involving predictive
+                modeling, data analysis, APIs, and AI applications.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-year">
+              FLOZEN AI
+            </div>
+
+            <div class="timeline-content">
+
+              <h3>
+                Founder & CEO
+              </h3>
+
+              <p>
+                Building FLOZEN AI around AI education,
+                automation, consulting, and practical technology.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-year">
+              AUTOMATION
+            </div>
+
+            <div class="timeline-content">
+
+              <h3>
+                AI Automation & Agentic Systems
+              </h3>
+
+              <p>
+                Exploring AI agents, workflow automation,
+                APIs, RAG systems, communication automation,
+                and intelligent business processes.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PHILOSOPHY
+    ====================================================== -->
+
+    <section class="philosophy">
+
+      <div class="container reveal">
+
+        <p>
+          "AI is not a replacement for
+          <span>understanding.</span>
+          It is a tool for extending what we can build."
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="reveal">
+
+            <div class="eyebrow">
+              CONTACT
+            </div>
+
+            <h2 class="contact-heading" style="margin-top:30px;">
+              Let's build
+              something
+              <span>useful.</span>
+            </h2>
+
+          </div>
+
+
+          <div class="contact-info reveal">
+
+            <a
+              class="contact-link"
+              href="mailto:harissaddique959@gmail.com"
+            >
+              Email ↗
+              <br>
+              <small style="color:#66736a;">
+                harissaddique959@gmail.com
+              </small>
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/haris-saddique-049189357/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://github.com/Haris444504/Data-Science-and-Machine-Learning-Portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              class="contact-link"
+              href="https://flozenai.co"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FLOZEN AI ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-logo">
+          HARIS SADDIQUE
+        </div>
+
+        <div class="footer-copy">
+          AI Engineer · Builder · Founder
+        </div>
+
+        <div class="footer-socials">
+
+          <a
+            href="https://www.linkedin.com/in/haris-saddique-049189357/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/Haris444504/Data-Science-and-Machine-Learning-Portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://flozenai.co"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FLOZEN AI
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <section class="chat-panel" id="chatPanel" aria-label="Chat with Haris AI" hidden>
+    <div class="chat-header">
+      <div>
+        <strong>Haris AI</strong>
+        <p>Ask me about Haris</p>
+      </div>
+      <button class="chat-close" id="chatClose" type="button" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="chat-messages" id="chatMessages" aria-live="polite">
+      <div class="chat-message">Hi! What would you like to know about Haris?</div>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input class="chat-input" id="chatInput" type="text" placeholder="Type your message..." aria-label="Your message" autocomplete="off" required />
+      <button class="chat-send" id="chatSend" type="submit">Send</button>
+    </form>
+  </section>
+  <button class="chat-launcher" id="chatLauncher" type="button" aria-label="Open chat" aria-controls="chatPanel" aria-expanded="false">💬</button>
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* Header background on scroll */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* Scroll reveal */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+
+    /* Smooth navigation */
+
+    document
+      .querySelectorAll('a[href^="#"]')
+      .forEach((link) => {
+
+        link.addEventListener("click", function (event) {
+
+          const target =
+            document.querySelector(
+              this.getAttribute("href")
+            );
+
+          if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+              behavior: "smooth"
+            });
+
+          }
+
+        });
+
+      });
+
+    /* n8n chat */
+
+    const chatWebhookUrl =
+      "https://haris0987.app.n8n.cloud/webhook-test/ab04870d-76d8-40f0-afef-33dc5ebefdaf";
+    const chatLauncher = document.getElementById("chatLauncher");
+    const chatPanel = document.getElementById("chatPanel");
+    const chatClose = document.getElementById("chatClose");
+    const chatForm = document.getElementById("chatForm");
+    const chatInput = document.getElementById("chatInput");
+    const chatSend = document.getElementById("chatSend");
+    const chatMessages = document.getElementById("chatMessages");
+
+    function setChatOpen(isOpen) {
+      chatPanel.hidden = !isOpen;
+      chatLauncher.setAttribute("aria-expanded", String(isOpen));
+      if (isOpen) chatInput.focus();
+    }
+
+    function addChatMessage(text, role, isError = false) {
+      const message = document.createElement("div");
+      message.className = `chat-message ${role}${isError ? " error" : ""}`;
+      message.textContent = text;
+      chatMessages.appendChild(message);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return message;
+    }
+
+    function getAgentReply(data) {
+      if (typeof data === "string") {
+        try {
+          data = JSON.parse(data);
+        } catch {
+          return data;
+        }
+      }
+
+      if (Array.isArray(data)) data = data[0];
+      if (data && typeof data === "object") {
+        const reply = data.output ?? data.response ?? data.reply ?? data.message;
+        if (typeof reply === "string") return reply;
+      }
+      return "";
+    }
+
+    chatLauncher.addEventListener("click", () => setChatOpen(chatPanel.hidden));
+    chatClose.addEventListener("click", () => setChatOpen(false));
+
+    chatForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const message = chatInput.value.trim();
+      if (!message || chatSend.disabled) return;
+
+      addChatMessage(message, "user");
+      chatInput.value = "";
+      chatSend.disabled = true;
+      const waitingMessage = addChatMessage("Thinking...", "agent");
+
+      try {
+        const response = await fetch(chatWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message, chatInput: message })
+        });
+
+        const responseBody = await response.text();
+        if (!response.ok) {
+          throw new Error(`The chat service returned HTTP ${response.status}.`);
+        }
+
+        const reply = getAgentReply(responseBody);
+        if (!reply) throw new Error("The chat service returned an empty reply.");
+        waitingMessage.textContent = reply;
+      } catch (error) {
+        waitingMessage.classList.add("error");
+        waitingMessage.textContent =
+          `Sorry, I couldn't reach the chat agent. ${error.message}`;
+      } finally {
+        chatSend.disabled = false;
+        chatInput.focus();
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    });
+
+  </script>
+
+</body>
+</html>
+```
